@@ -30,5 +30,7 @@ public class Exmaple1 implements Test{
 		// TODO Auto-generated method stub
 		
 	}
+	
+	
 
 }
