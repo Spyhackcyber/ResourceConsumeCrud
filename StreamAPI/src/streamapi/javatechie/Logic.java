@@ -22,7 +22,7 @@ public final class Logic {
    */
     	
     	return (input.equalsIgnoreCase("TAX")) ?
-    	Database.getEmployees().stream().filter(emp->emp.getSalary()>30000).collect(Collectors.toList())
+    	Database.getEmployees().parallelStream().filter(emp->emp.getSalary()>30000).collect(Collectors.toList())
     	:
     	Database.getEmployees().stream().filter(emp->emp.getSalary()<=30000).collect(Collectors.toList());
     	
