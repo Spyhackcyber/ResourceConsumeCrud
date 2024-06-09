@@ -66,7 +66,18 @@ public class EmployeeController {
         return "ViewAnimeList";
     }
 
-    @GetMapping("/addAnime")
+    @GetMapping("/addmodal")
+    public void addmodal(@ModelAttribute("message") String message, Model model) {
+       
+    	
+    	
+        model.addAttribute("message", "Hello");
+        model.addAttribute("ViewAnimeList");
+        
+    }
+
+    
+     @GetMapping("/addAnime")
     public String addAnime(@ModelAttribute("message") String message, Model model) {
         model.addAttribute("employee", new Employee());
         model.addAttribute("message", message);

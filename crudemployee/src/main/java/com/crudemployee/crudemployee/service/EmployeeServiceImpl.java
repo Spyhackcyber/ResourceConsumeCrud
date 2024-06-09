@@ -5,18 +5,18 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.crudemployee.crudemployee.entity.Employee;
+import com.crudemployee.crudemployee.entity.Student;
 import com.crudemployee.crudemployee.repo.EmployeeRepository;
+import com.crudemployee.crudemployee.repo.StudentRepository;
 
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
 
 	 private  EmployeeRepository empRepo;
 	 
-	
-	public EmployeeServiceImpl(EmployeeRepository empRepo) {
-		
-		this.empRepo = empRepo;
-	}
+		public EmployeeServiceImpl(EmployeeRepository empRepo) {
+			  
+			  this.empRepo = empRepo; }
 
 	@Override
 	public String addorUpdateEmployee(Employee emp) {
@@ -36,6 +36,10 @@ public class EmployeeServiceImpl implements EmployeeService {
 		}
 	}
 
+	
+
+	
+	
 	@Override
 	public List<Employee> getAllBooks() {
 		// TODO Auto-generated method stub
@@ -51,6 +55,10 @@ public class EmployeeServiceImpl implements EmployeeService {
 		
 		return empRepo.findAll();
 	}
+	
+	
+
+	
 
 	@Override
 	public String delete(Integer id) {
