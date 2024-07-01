@@ -13,19 +13,26 @@ public class OptionalExample {
 		if(s.isEmpty()) {
 			System.out.println(s);
 			System.out.println("Not Null");
-		}else
+		}else 
 		{
 			System.out.println(s);
 			System.out.println("Null");
 		}
 		
-	    }
+       
+        
+	
+	
+	}
 
 	public static Optional<String> display(String i) {
 	
 		Optional<String> op=Optional.ofNullable(null);
 		return op;
 	}
+	
+	
+	
 	
 	
 }

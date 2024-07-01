@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
@@ -67,13 +68,17 @@ public class EmployeeController {
     }
 
     @GetMapping("/addmodal")
-    public void addmodal(@ModelAttribute("message") String message, Model model) {
+public ModelAndView addmodal(@ModelAttribute("message") String message, Model model1) {
        
     	
-    	
-        model.addAttribute("message", "Hello");
-        model.addAttribute("ViewAnimeList");
+    	ModelAndView model = new ModelAndView();
+        model.addObject("message", "RAM RAM");
+        model.setViewName("AddAnime");
         
+        model1.addAttribute("employee", new Employee());
+        model1.addAttribute("message", message);
+        
+        return model;
     }
 
     

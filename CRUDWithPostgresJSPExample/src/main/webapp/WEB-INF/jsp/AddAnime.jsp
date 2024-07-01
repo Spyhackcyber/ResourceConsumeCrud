@@ -23,6 +23,8 @@
 </head>
 <body>
 
+   <h1>${message}</h1>
+
     <div class="container">
 
         <h1 class="p-3"> Add an Employee </h1>

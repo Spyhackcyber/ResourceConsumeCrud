@@ -54,6 +54,7 @@ public class streamgroup {
 		
 		
 		
+		
 		System.out.println(emplist2.stream().collect(Collectors.groupingBy(p->p.getEmpId(), Collectors.toList())));
 		
 		
