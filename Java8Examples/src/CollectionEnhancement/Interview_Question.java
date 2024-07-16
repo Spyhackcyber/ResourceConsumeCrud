@@ -23,9 +23,9 @@ int minimum=l.stream().min(Comparator.comparing(Integer::valueOf)).get();
 
 System.out.println(minimum);
 
-long count=l.stream().count();
+long count=l.stream().filter(m->m==3).count();
 
-System.out.println(count);
+System.out.println("Count :"+count);
 
 int Sum=l.stream().reduce(0, Integer::sum);
 
